@@ -6,6 +6,7 @@ const { type } = require("os");
 const { time } = require("console");
 const prefix = botSettings.prefix;
 const bot = new Discord.Client();
+const token = "NzUwMzc1NTA4NDIzODY4NDc3.X05npg.9FU9OaJB8y_4xbKxe6ZLR-73iDA";
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -111,4 +112,4 @@ bot.on("message", async message => {
 	
 });
 
-bot.login(botSettings.token);
+bot.login(token);
