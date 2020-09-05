@@ -99,7 +99,7 @@ bot.on("message", async message => {
 	}
 	if (message.mentions.users.first()){
 		message.channel.awaitMessages(filterdirect, {time: 86400000, maxMatches: 20}).then(collected =>{
-			message.reply(`You are mentioning ${message.mentions.users.first().tag} to much!`);
+			message.reply(`You are mentioning ${msg1.mentions.users.first().tag} to much!`);
 		});
 		message.channel.awaitMessages(filterdirect, {time: 86400000, maxMatches: 25}).then(collected => {
 			const mentiondirectspammer = message.member;
