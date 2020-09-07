@@ -25,7 +25,7 @@ fs.readdir("./commands/", (err, files) => {
 	}
 
 	console.log("Loading Commands...");
-	console.log(bot.guilds.cache.size);
+	console.log(bot.guilds.size);
 	
 	jsFiles.forEach((f, i) => {
 
