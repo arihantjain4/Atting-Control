@@ -25,7 +25,8 @@ fs.readdir("./commands/", (err, files) => {
 	}
 
 	console.log("Loading Commands...");
-
+	console.log(bot.guilds.cache.size);
+	
 	jsFiles.forEach((f, i) => {
 
 		let props = require(`./commands/${f}`);
