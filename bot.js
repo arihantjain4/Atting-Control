@@ -6,6 +6,7 @@ const { time } = require("console");
 const prefix = "~";
 const bot = new Discord.Client();
 const token = "NzUwMzc1NTA4NDIzODY4NDc3.X05npg.9FU9OaJB8y_4xbKxe6ZLR-73iDA";
+const guildslist = [];
 bot.commands = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
@@ -25,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 	}
 
 	console.log("Loading Commands...");
-	console.log(bot.guilds.size);
+	
 	
 	jsFiles.forEach((f, i) => {
 
@@ -56,6 +57,10 @@ bot.on("ready", async () => {
 		console.log(e.stack);
 
 	}
+	bot.guilds.forEach((guild) => {
+		guildslist.push(guild);
+	});
+	console.log(guildslist.length);
 });
 
 bot.on("message", async message => { 
