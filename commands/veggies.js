@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
         });
 
         message.member.addRole(role)
-        message.delete(1000);
+        message.delete(500);
         if (message){
             
         }
