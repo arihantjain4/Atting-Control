@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 
-    name: "veggies",
+    name: "fruits",
     desc: "Advises healthy eating"
 
 }
